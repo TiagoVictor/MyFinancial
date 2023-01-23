@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\DataModel\" />
     <Folder Include="Data\Repository\Interface\" />
     <Folder Include="Service\Interface\" />
   </ItemGroup>
