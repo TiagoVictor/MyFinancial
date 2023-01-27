@@ -9,4 +9,10 @@
         public string Login { get; set; }
         public string PassWord { get; set; }
     }
+
+    public class LoginDto
+    {
+        public string Login { get; set; }
+        public string PassWord { get; set; }
+    }
 }

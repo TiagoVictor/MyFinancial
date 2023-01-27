@@ -5,7 +5,7 @@ using MyFinancial.Service.Interface;
 
 namespace MyFinancial.Controllers
 {
-    [Route("v1")]
+    [Route("User")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
@@ -15,9 +15,16 @@ namespace MyFinancial.Controllers
             _userService = userService;
         }
 
+        
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet("Login")]
+        public IActionResult Login()
+        {
+            return PartialView("_Login");
         }
 
         [HttpPost("User")]
@@ -72,6 +79,17 @@ namespace MyFinancial.Controllers
         public async Task<User> GetById(int id)
         {
             return await _userService.GetUserByIdAsync(id);
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        {
+            var user = await _userService.GetUserByPassAndLogin(dto.PassWord, dto.Login);
+
+            if(user != null)
+                return Ok(user);
+
+            return NoContent();
         }
     }
 }

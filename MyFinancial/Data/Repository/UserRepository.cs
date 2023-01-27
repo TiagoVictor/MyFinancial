@@ -55,5 +55,10 @@ namespace MyFinancial.Data.Repository
                 PassWord = dto.PassWord,
             };
         }
+
+        public Task<User> GetUserByPassAndLogin(string password, string login)
+        {
+            return _appDbContext.Users.Where(x => x.PassWord == password && x.Login == login).FirstOrDefaultAsync();
+        }
     }
 }
