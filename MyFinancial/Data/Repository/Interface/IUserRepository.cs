@@ -9,6 +9,7 @@ namespace MyFinancial.Data.Repository.Interface
         void UpdateUser(UserDto dto);
         Task DeleteUser(int id);
         Task<User> GetUserAsync(int id);
+        Task<User> GetUserByPassAndLogin(string password, string login);
         Task<IEnumerable<User>> GetAllUsersAsync();
     }
 }

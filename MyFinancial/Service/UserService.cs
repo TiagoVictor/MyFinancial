@@ -30,6 +30,11 @@ namespace MyFinancial.Service
             return await _userRepository.GetUserAsync(id);
         }
 
+        public async Task<User> GetUserByPassAndLogin(string password, string login)
+        {
+            return await _userRepository.GetUserByPassAndLogin(password, login);
+        }
+
         public async Task SaveUserAsync(UserDto dto)
         {
             await _userRepository.SaveUserAsync(dto);

@@ -50,8 +50,15 @@ namespace MyFinancial.Data.Repository
                 Id = dto.Id,
                 Name = dto.Name,
                 LastName = dto.LastName,
-                BirthDate = dto.BirthDate
+                BirthDate = dto.BirthDate,
+                Login = dto.Login,
+                PassWord = dto.PassWord,
             };
+        }
+
+        public Task<User> GetUserByPassAndLogin(string password, string login)
+        {
+            return _appDbContext.Users.Where(x => x.PassWord == password && x.Login == login).FirstOrDefaultAsync();
         }
     }
 }
