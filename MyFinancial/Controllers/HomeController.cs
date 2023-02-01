@@ -18,6 +18,11 @@ namespace MyFinancial.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return PartialView("_Login");
+        }
+
         public IActionResult Privacy()
         {
             return View();

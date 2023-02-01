@@ -11,5 +11,6 @@ namespace MyFinancial.Service.Interface
         void UpdateUser(UserDto dto);
         Task<User> GetUserByIdAsync(int id);
         Task<IEnumerable<User>> GetAllUsersAsync();
+        Task<User> GetUserByPassAndLogin(string password, string login);
     }
 }

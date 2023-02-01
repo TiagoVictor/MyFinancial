@@ -1,0 +1,38 @@
+﻿<form id="formRequest">
+    <div class="form-group">
+        <div class="col-md-6">
+            <label for="login">Login</label>
+            <input type="text" id="login" />
+        </div>
+        <div class="col-md-6">
+            <label for="password">Senha</label>
+            <input type="text" id="password" />
+        </div>
+    </div>
+    <button type="submit">Logar</button>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $('#formRequest').submit(function () {
+        var data = {
+            "login": $('#login').val(),
+            "password": $('#password').val(),
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/User/Login",
+            data: JSON.stringify(data),
+            success: function (result) {
+                console.log("Teste " + result);
+            },
+            error: function () {
+                console.log("Erro")
+            },
+            dataType: "json",
+            contentType: "application/json"
+        });
+        return false;
+    });
+</script>
