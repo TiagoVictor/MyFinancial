@@ -9,10 +9,12 @@ namespace MyFinancial.Service
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IIncomeService _incomeService;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IIncomeService incomeService)
         {
             _userRepository = userRepository;
+            _incomeService = incomeService;
         }
 
         public async Task DeleteUserAsync(int id)

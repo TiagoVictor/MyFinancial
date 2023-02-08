@@ -1,0 +1,36 @@
+﻿@model MyFinancial.Dto.IndexIncomeDto
+
+<a asp-controller="Income" asp-action="NewIncome">Novo valor</a>
+
+<select class="js-example-basic-single form-control" id="teste" name="state">
+    <option value="">Escolha</option>
+    @foreach(var item in Model.List)
+    {
+        <option value="@item.Id">@item.UserId</option>
+    }
+</select>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Mês</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Usuario de Criação</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.List)
+    {
+        <tr>
+            <td>@item.Month</td>
+            <td>@item.Amount</td>
+            <td>@item.User.Name</td>
+        </tr>
+    }
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#teste').select2();
+    });
+</script>

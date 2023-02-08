@@ -38,7 +38,7 @@ namespace MyFinancial.Controllers
 
             await _userService.SaveUserAsync(dto);
 
-            return Created($"v1/document/{dto.Name}", dto);
+            return Created($"v1/user/{dto.Name}", dto);
         }
 
         [HttpPut("User/{id}")]

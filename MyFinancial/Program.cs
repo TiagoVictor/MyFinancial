@@ -14,8 +14,10 @@ builder.Services.Configure<ConnectionStrings>(builder.Configuration.GetSection("
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Financial")));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IIncomeRepository, IncomeRepository>();
 
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IIncomeService, IncomeService>();
 
 var app = builder.Build();
 

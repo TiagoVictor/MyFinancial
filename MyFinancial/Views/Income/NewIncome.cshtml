@@ -1,0 +1,14 @@
+﻿@model MyFinancial.Dto.IncomeDto
+
+<form asp-controller="Income" asp-action="Income" method="post">
+    <label for="Amounth">Mês Referencia</label>
+    <input name="Month" type="date" id="Month"/>
+
+    <label for="Amount">Valor</label>
+    <input name="Amount" type="number" id="Amount"/>
+
+    <label for="UserId">Id de Usuário</label>
+    <input name="UserId" type="number" id="UserId"/>
+
+    <button type="submit">Salvar</button>
+</form>

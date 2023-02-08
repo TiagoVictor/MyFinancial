@@ -60,5 +60,10 @@ namespace MyFinancial.Data.Repository
         {
             return _appDbContext.Users.Where(x => x.PassWord == password && x.Login == login).FirstOrDefaultAsync();
         }
+
+        public Task SaveSalary(UserDto userDto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace MyFinancial.Data.Repository.Interface
         Task<User> GetUserAsync(int id);
         Task<User> GetUserByPassAndLogin(string password, string login);
         Task<IEnumerable<User>> GetAllUsersAsync();
+        Task SaveSalary(UserDto userDto);
     }
 }
