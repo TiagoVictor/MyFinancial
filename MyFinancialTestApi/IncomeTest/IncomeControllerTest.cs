@@ -1,13 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MyFinancial.Controllers;
+﻿using MyFinancial.Controllers;
 using MyFinancial.Data.DataModel;
 using MyFinancial.Service.Interface;
 using MyFinancialTestApi.UserTest;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyFinancialTestApi.IncomeTest
 {

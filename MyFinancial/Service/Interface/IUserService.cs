@@ -1,5 +1,4 @@
 ﻿using MyFinancial.Data.DataModel;
-using MyFinancial.Data.Repository.Interface;
 using MyFinancial.Dto;
 
 namespace MyFinancial.Service.Interface

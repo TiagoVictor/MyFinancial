@@ -2,7 +2,6 @@
 using MyFinancial.Data.Repository.Interface;
 using MyFinancial.Dto;
 using MyFinancial.Service.Interface;
-using SQLitePCL;
 
 namespace MyFinancial.Service
 {

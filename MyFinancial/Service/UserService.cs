@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using MyFinancial.Data.DataModel;
+﻿using MyFinancial.Data.DataModel;
 using MyFinancial.Data.Repository.Interface;
 using MyFinancial.Dto;
 using MyFinancial.Service.Interface;
